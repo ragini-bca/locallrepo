@@ -1,60 +1,39 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Hamburger toggle
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
 
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('show');
-    });
-
-    // Dropdown toggle (for mobile and desktop click)
-    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-
-    dropdownToggles.forEach(toggle => {
-        toggle.addEventListener('click', (e) => {
-            e.preventDefault(); // prevent default link navigation
-            const dropdownContent = toggle.nextElementSibling;
-            dropdownContent.classList.toggle('show'); // toggle visibility
-        });
-    });
-
-    // Close dropdown if clicked outside
-    document.addEventListener('click', function(e) {
-        dropdownToggles.forEach(toggle => {
-            const dropdownContent = toggle.nextElementSibling;
-            if (!toggle.contains(e.target) && !dropdownContent.contains(e.target)) {
-                dropdownContent.classList.remove('show');
-            }
-        });
-    });
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+  hamburger.classList.toggle('active');
 });
-document.addEventListener("DOMContentLoaded", function() {
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
 
-  // Hamburger toggle
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
+// Fade-in sections on scroll
+const faders = document.querySelectorAll('.fade');
+
+const appearOptions = {
+  threshold: 0.2,
+  rootMargin: "0px 0px -50px 0px"
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('show');
+    appearOnScroll.unobserve(entry.target);
   });
+}, appearOptions);
 
-  // Mobile dropdown toggle
-  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-  dropdownToggles.forEach(toggle => {
-    toggle.addEventListener('click', function(e) {
-      e.preventDefault();
-      const dropdownContent = toggle.nextElementSibling;
-      dropdownContent.classList.toggle('show');
-    });
-  });
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
+// Dropdown toggle for mobile
+const dropdowns = document.querySelectorAll('.dropdown');
 
-  // Close dropdown if clicked outside
-  document.addEventListener('click', function(e) {
-    dropdownToggles.forEach(toggle => {
-      const dropdownContent = toggle.nextElementSibling;
-      if (!toggle.contains(e.target) && !dropdownContent.contains(e.target)) {
-        dropdownContent.classList.remove('show');
-      }
-    });
+dropdowns.forEach(dropdown => {
+  dropdown.addEventListener('click', function(e) {
+    if(window.innerWidth <= 768) {
+      e.preventDefault(); // prevent link navigation
+      dropdown.classList.toggle('active');
+    }
   });
 });
-onclick="location.href='courses/bca.html'"
