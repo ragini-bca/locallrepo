@@ -1,0 +1,45 @@
+*{
+    margin:auto;
+    padding:0px;
+    box-sizing:border-box;
+
+}
+
+
+
+.container{
+
+    max-width:80%;
+    
+    padding :10px;  
+    margin:auto;
+}
+.container  h3,p
+{
+ text-align: center;
+ width: 30%;
+ font-size: 40px;
+}
+input,textarea{
+    font-size:25px;
+    width:80%;
+    margin:11px;
+    padding:7px;
+}
+.btn
+{
+    font-size: 25px;
+    width:30% ;
+    height: 60;
+    background-color: aqua;
+}
+.bg{
+    width:100%;
+    position:absolute;
+    z-index: -1;
+    font size :90px;
+}
+.sub{
+    margin: 50px;
+    color: blueviolet;
+}
