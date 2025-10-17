@@ -1,39 +1,48 @@
-// Hamburger menu
+// ------------------------------
+// 🔹 HAMBURGER & MOBILE MENU
+// ------------------------------
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
 
 hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
-  hamburger.classList.toggle('active');
+  hamburger.classList.toggle('active'); // X animation
+  navLinks.classList.toggle('show');    // show mobile menu
 });
 
-// Fade-in sections on scroll
-const faders = document.querySelectorAll('.fade');
+// ------------------------------
+// 🔹 MOBILE DROPDOWN (Courses)
+// ------------------------------
+const dropdownToggle = document.getElementById('courses-toggle');
+const dropdown = dropdownToggle?.parentElement;
 
-const appearOptions = {
-  threshold: 0.2,
-  rootMargin: "0px 0px -50px 0px"
-};
-
-const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    entry.target.classList.add('show');
-    appearOnScroll.unobserve(entry.target);
-  });
-}, appearOptions);
-
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
+dropdownToggle?.addEventListener('click', (e) => {
+  // Only activate on mobile
+  if (window.innerWidth <= 768) {
+    e.preventDefault();  // prevent page jump
+    dropdown.classList.toggle('open'); // open/close submenu
+  }
 });
-// Dropdown toggle for mobile
-const dropdowns = document.querySelectorAll('.dropdown');
 
-dropdowns.forEach(dropdown => {
-  dropdown.addEventListener('click', function(e) {
-    if(window.innerWidth <= 768) {
-      e.preventDefault(); // prevent link navigation
-      dropdown.classList.toggle('active');
+// ------------------------------
+// 🔹 CLOSE MENU WHEN LINK CLICKED (MOBILE)
+// ------------------------------
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 768) {
+      navLinks.classList.remove('show');
+      hamburger.classList.remove('active');
+      dropdown.classList.remove('open');
     }
   });
+});
+
+// ------------------------------
+// 🔹 OPTIONAL: CLOSE MOBILE MENU ON RESIZE TO DESKTOP
+// ------------------------------
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 768) {
+    navLinks.classList.remove('show');
+    hamburger.classList.remove('active');
+    dropdown.classList.remove('open');
+  }
 });
