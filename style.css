@@ -1,0 +1,1403 @@
+/* ===============================
+   🔹 GLOBAL STYLES
+=================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+.facilities {
+  width: 90%;
+  max-width: 1100px;
+  margin: 50px auto;
+}
+
+.facilities h2 {
+  text-align: center;
+  
+  margin-bottom: 30px;
+}
+.facility-content {
+  flex: 1;
+}
+
+.facility-content p {
+  text-align: justify;
+}
+
+/* ===============================
+   🔹 SEMESTER LINKS SECTION
+=================================*/
+/* 🔹 Semester Section - Enhanced Style */
+.semester-links {
+  text-align: center;
+  margin: 60px auto;
+  max-width: 600px;
+}
+
+.semester-links h2 {
+  color: #004aad;
+  font-size: 2rem;
+  margin-bottom: 35px;
+  font-weight: 600;
+}
+
+/* 🔹 Semester Container */
+.sem-container {
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  align-items: center;
+  gap: 20px; /* Space between buttons */
+}
+
+/* 🔹 Stylish Large Semester Buttons */
+.sem-container button {
+  width: 80%;
+  max-width: 450px;
+  background: linear-gradient(135deg, #004aad, #007bff);
+  color: white;
+  border: none;
+  padding: 18px 25px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* 🔹 Hover Animation */
+.sem-container button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #007bff, #00a2ff);
+  box-shadow: 0 10px 25px rgba(0, 120, 255, 0.4);
+}
+
+/* 🔹 Back Button Style (Keep distinct) */
+.semester-links > button {
+  margin-top: 40px;
+  background: #333;
+  color: white;
+  border: none;
+  padding: 14px 35px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.semester-links > button:hover {
+  background: #000;
+}
+
+
+
+/* ===============================
+   🔹 RESPONSIVE DESIGN
+=================================*/
+@media (max-width: 768px) {
+  .course-overview {
+    padding: 25px;
+  }
+
+  .course-overview h2 {
+    font-size: 1.6rem;
+  }
+
+  .sem-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sem-container button {
+    width: 80%;
+  }
+}
+/* ==============================
+   🔹 GLOBAL
+============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f8f9fa;
+  color: #333;
+  margin-top: 120px; /* Avoid overlap with fixed header */
+}
+
+
+
+/* ==============================
+   🔹 NAVIGATION
+============================== */
+.main-nav {
+  background: #004aad;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  list-style: none;
+  padding: 10px 0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.nav-links a:hover {
+  color: #ffd700;
+  transform: scale(1.05);
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #0056d1;
+  min-width: 160px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+}
+
+.dropdown-content li a:hover {
+  background: #007bff;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ==============================
+   🔹 HAMBURGER (MOBILE)
+============================== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  z-index: 1100;
+}
+
+.hamburger span {
+  background: white;
+  height: 3px;
+  width: 25px;
+  margin: 4px 0;
+  border-radius: 3px;
+}
+
+/* ==============================
+   🔹 RESPONSIVE
+============================== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #004aad;
+    display: none;
+    padding: 15px 0;
+  }
+
+  .dropdown-content {
+    position: static;
+    background: #0056d1;
+    box-shadow: none;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: none;
+  }
+}
+.footer {
+  font-size: 5px;
+  padding: 15px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  text-align: center; /* Center all text by default */
+  padding: 50px 20px;
+  line-height: 1.6;
+}
+
+/* ==========================
+   🔹 PAGE HEADING
+========================== */
+h2 {
+  font-size: 2rem;
+  color: #004aad;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* Paragraphs */
+p {
+  text-align: center; /* Ensure paragraphs are centered */
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* ==========================
+   🔹 SUBJECT BUTTONS
+========================== */
+.we {
+  display: inline-block;
+  width: 80%;
+  max-width: 400px;
+  background: linear-gradient(135deg, #004aad, #007bff);
+  color: white;
+  text-decoration: none;
+  padding: 15px 0;
+  margin: 10px auto; /* Center buttons horizontally */
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  text-align: center; /* Center text inside button */
+}
+
+.we:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #007bff, #00a2ff);
+  box-shadow: 0 10px 25px rgba(0, 120, 255, 0.4);
+}
+
+/* Back Button */
+.back[href$="bsc.html"] {
+  background: #555;
+}
+
+.back[href$="bsc.html"]:hover {
+  background: #222;
+}
+/* 🔹 Fixed Semester Heading */
+.aa {
+  position: fixed;          /* Stick at top */
+  top: 0;                   /* Align at top of page */
+  left: 0;
+  width: 100%;              /* Full width */
+  background: #004aad;      /* Matching site header color */
+  color: white;             /* Text color */
+  text-align: center;       /* Center text */
+  padding: 15px 0;          /* Space inside heading */
+  font-size: 2rem;          /* Large, readable */
+  font-weight: 700;         /* Bold */
+  letter-spacing: 1px;      /* Optional styling */
+  z-index: 1000;            /* Stay on top of other content */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25); /* Optional shadow */
+}
+
+/* 🔹 Push page content below fixed heading */
+body {
+  margin-top: 70px;  /* Adjust based on heading height */
+}
+
+
+
+/* 🔹 SMALL BACK BUTTON */
+.back[href$="bsc.html"] {
+  display: inline-block;
+  width: auto;             /* Fit text */
+  padding: 12px 22px;       /* Smaller padding */
+  font-size: 1.2rem;         /* Smaller font */
+  background: #555;        /* Dark grey */
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.back[href$="bsc.html"]:hover {
+  background: #222;
+  transform: scale(1.05);  /* Slight hover effect */
+}
+/* 🔹 Footer text small */
+.footer footer p {
+  font-size: 1rem; 
+  width:100%;     /* Smaller text size */
+  margin: 0;
+  text-align: center;      /* Keep centered */
+  color: #ffffff;          /* Ensure text stays visible */
+}
+
+
+/* ==========================
+   🔹 SITE HEADER
+========================== */
+.site-header {
+  position: fixed;            /* Stick at top */
+  top: 0;
+  left: 0;
+  width: 100%;                /* Full width */
+  background: #004aad;        /* GFGC Dandeli theme blue */
+  color: white;
+  text-align: center;         /* Center logo */
+  padding: 15px 0;            /* Vertical padding */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25); /* Subtle shadow */
+  z-index: 1000;              /* Always on top */
+}
+
+
+/* 🔹 SMALL BACK BUTTON */
+.back[href$="bcom.html"] {
+  display: inline-block;      /* Makes it a button-like element */
+  width: auto;                /* Fit text width */
+  padding: 12px 22px;          /* Smaller padding */
+  font-size: 1rem;            /* Smaller text */
+  background: #555;           /* Dark gray background */
+  color: white;               /* White text */
+  text-decoration: none;      /* Remove underline */
+  border-radius: 8px;         /* Rounded corners */
+  margin-top: 20px;           /* Space from above content */
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-align: center;         /* Center text inside button */
+}
+
+/* Hover effect */
+.back[href$="bcom.html"]:hover {
+  background: #222;           /* Darker on hover */
+  transform: scale(1.05);     /* Slight pop on hover */
+}
+.back[href$="bca.html"] {
+  display: inline-block;      /* Makes it a button-like element */
+  width: auto;                /* Fit text width */
+  padding: 12px 22px;          /* Smaller padding */
+  font-size: 1rem;            /* Smaller text */
+  background: #555;           /* Dark gray background */
+  color: white;               /* White text */
+  text-decoration: none;      /* Remove underline */
+  border-radius: 8px;         /* Rounded corners */
+  margin-top: 20px;           /* Space from above content */
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-align: center;         /* Center text inside button */
+}
+
+/* Hover effect */
+.back[href$="bca.html"]:hover {
+  background: #222;           /* Darker on hover */
+  transform: scale(1.05);     /* Slight pop on hover */
+}
+.back[href$="ba.html"] {
+  display: inline-block;      /* Makes it a button-like element */
+  width: auto;                /* Fit text width */
+  padding: 12px 22px;          /* Smaller padding */
+  font-size: 1rem;            /* Smaller text */
+  background: #555;           /* Dark gray background */
+  color: white;               /* White text */
+  text-decoration: none;      /* Remove underline */
+  border-radius: 8px;         /* Rounded corners */
+  margin-top: 20px;           /* Space from above content */
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-align: center;         /* Center text inside button */
+}
+
+/* Hover effect */
+.back[href$="ba.html"]:hover {
+  background: #222;           /* Darker on hover */
+  transform: scale(1.05);     /* Slight pop on hover */
+}
+/* 🔹 SMALL BACK BUTTON ABOVE FOOTER */
+/* 🔹 SMALL BACK BUTTON ABOVE FOOTER */
+.back[href$="sem1.html"] {
+  display: inline-block;       /* Behaves like a button */
+  padding: 12px 30px;          /* Comfortable padding: vertical + horizontal */
+  font-size: 1rem;             /* Readable text */
+  background: #555;            /* Dark gray background */
+  color: white;                /* Text color */
+  text-decoration: none;       /* Remove underline */
+  border-radius: 25px;         /* Rounded pill-shaped button */
+  margin: 25px auto;           /* Center horizontally & space above */
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-align: center;          /* Center text */
+}
+
+/* Hover effect */
+.back[href$="sem1.html"]:hover {
+  background: #222;            /* Darker on hover */
+  transform: scale(1.05);      /* Slight pop effect */
+}
+
+.back[href$="sem2.html"] {
+  display: inline-block;      /* Behave like a button */
+  padding: 12px 30px;          /* Small padding */
+  font-size: 1rem;            /* Small, readable text */
+  background: #555;           /* Dark gray background */
+  color: white;               /* Text color */
+  text-decoration: none;      /* Remove underline */
+  border-radius: 8px;         /* Rounded corners */
+  margin: 20px auto;          /* Center horizontally & space above */
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-align: center;         /* Center text */
+}
+
+/* Hover effect */
+.back[href$="sem2.html"]:hover {
+  background: #222;           /* Darker on hover */
+  transform: scale(1.05);     /* Slight pop effect */
+}
+.back[href$="sem3.html"] {
+  display: inline-block;      /* Behave like a button */
+  padding: 12px 30px;          /* Small padding */
+  font-size: 1rem;            /* Small, readable text */
+  background: #555;           /* Dark gray background */
+  color: white;               /* Text color */
+  text-decoration: none;      /* Remove underline */
+  border-radius: 8px;         /* Rounded corners */
+  margin: 20px auto;          /* Center horizontally & space above */
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-align: center;         /* Center text */
+}
+
+/* Hover effect */
+.back[href$="sem3.html"]:hover {
+  background: #222;           /* Darker on hover */
+  transform: scale(1.05);     /* Slight pop effect */
+}
+.back[href$="sem4.html"][href$="sem4.html"] {
+  display: inline-block;      /* Behave like a button */
+  padding: 12px 30px;          /* Small padding */
+  font-size: 1rem;            /* Small, readable text */
+  background: #555;           /* Dark gray background */
+  color: white;               /* Text color */
+  text-decoration: none;      /* Remove underline */
+  border-radius: 8px;         /* Rounded corners */
+  margin: 20px auto;          /* Center horizontally & space above */
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-align: center;         /* Center text */
+}
+
+/* Hover effect */
+.back[href$="sem4.html"]:hover {
+  background: #222;           /* Darker on hover */
+  transform: scale(1.05);     /* Slight pop effect */
+}
+.back[href$="sem5.html"] {
+  display: inline-block;      /* Behave like a button */
+  padding: 12px 30px;          /* Small padding */
+  font-size: 1rem;            /* Small, readable text */
+  background: #555;           /* Dark gray background */
+  color: white;               /* Text color */
+  text-decoration: none;      /* Remove underline */
+  border-radius: 8px;         /* Rounded corners */
+  margin: 20px auto;          /* Center horizontally & space above */
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-align: center;         /* Center text */
+}
+
+/* Hover effect */
+.back[href$="sem5.html"]:hover {
+  background: #222;           /* Darker on hover */
+  transform: scale(1.05);     /* Slight pop effect */
+}
+.back[href$="sem6.html"] {
+  display: inline-block;      /* Behave like a button */
+  padding: 12px 30px;          /* Small padding */
+  font-size: 1rem;            /* Small, readable text */
+  background: #555;           /* Dark gray background */
+  color: white;               /* Text color */
+  text-decoration: none;      /* Remove underline */
+  border-radius: 8px;         /* Rounded corners */
+  margin: 20px auto;          /* Center horizontally & space above */
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-align: center;         /* Center text */
+}
+
+/* Hover effect */
+.back[href$="sem6.html"]:hover {
+  background: #222;           /* Darker on hover */
+  transform: scale(1.05);     /* Slight pop effect */
+}
+/* 🔹 Paragraph above subject buttons */
+.ee {
+  text-align: center;          /* Center the text */
+  font-size: 2rem;           /* Slightly larger than normal for readability */
+  font-weight: 500;            /* Medium weight */
+  color: #333;                 /* Dark text for visibility */
+  margin: 20px 0;              /* Space above and below */
+  line-height: 1.5;            /* Comfortable line spacing */
+}
+/* 🔹 Fixed Semester Title */
+.sem {
+  position: fixed;         /* Keeps it visible while scrolling */
+  top: 0;                  /* Stick to top */
+  left: 0;
+  width: 100%;             /* Full width */
+  background-color: #004aad;  /* Blue background */
+  color: white;            /* White text */
+  text-align: center;      /* Center text */
+  font-size: 1.8rem;       /* Nice readable size */
+  font-weight: bold;       /* Bold title */
+  margin: 0;               /* Remove default margin */
+  padding: 15px 0;         /* Add vertical spacing */
+  z-index: 999;            /* Stay above other elements */
+}
+
+/* 🔹 Push page content below the fixed header */
+body {
+  margin-top: 80px;        /* Prevent content from hiding under header */
+}
+.btn {
+  display: inline-block;
+  padding: 12px 30px;         /* More horizontal padding for oval shape */
+  background-color: orangered;    /* Orange color */
+  color: white;                /* White text */
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 50px;         /* Makes it fully oval */
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: darkorange; /* Slightly darker on hover */
+  transform: scale(1.05);       /* Small zoom effect */
+}
+
+
+/*don't change anythimg above here*/ 
+/*don't change anythimg above here*/ 
+/*don't change anythimg above here*/ 
+/* -------------------- RESET -------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* -------------------- HEADER -------------------- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #004080;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.site-header .logo a {
+  text-decoration: none;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: "Lucida Calligraphy", cursive;
+  transition: color 0.3s;
+}
+
+.site-header .logo a:hover {
+  color: #ffcc00;
+}
+
+/* -------------------- NAVIGATION -------------------- */
+.main-nav {
+  position: fixed;
+  top: 65px;
+  width: 100%;
+  background-color: #003366;
+  z-index: 999;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ff9933;
+}
+
+/* -------------------- DROPDOWN MENU -------------------- */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #003366;
+  list-style: none;
+  min-width: 150px;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-align: left;
+}
+
+.dropdown-content li a:hover {
+  background-color: #ff9933;
+  color: white;
+}
+
+/* Hover to open dropdown (desktop) */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* -------------------- HAMBURGER -------------------- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+  margin: 12px 20px;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Animate hamburger to "X" */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* -------------------- MOBILE STYLES -------------------- */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #003366;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .dropdown-content {
+    position: static;
+    background: #002850;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: none;
+  }
+
+  .dropdown.open .dropdown-content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* -------------------- BODY PADDING -------------------- */
+body {
+  padding-top: 130px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+/* -------------------- NAVIGATION -------------------- */
+.main-nav {
+  position: fixed;
+  top: 65px;
+  width: 100%;
+  background-color: #003366;
+  z-index: 999;
+}
+
+/* Default Desktop */
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 12px 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff9933;
+}
+
+/* -------------------- HAMBURGER -------------------- */
+.hamburger {
+  display: none; /* Hidden on desktop */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animate to "X" */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* -------------------- MOBILE VIEW -------------------- */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* ✅ makes it visible */
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #003366;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  /* ---------- HEADER ---------- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #004080;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  z-index: 1000;
+}
+
+.site-header .logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* ---------- NAVIGATION ---------- */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* ---------- DROPDOWN ---------- */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #004080;
+  padding: 10px 0;
+  margin-top: 8px;
+  border-radius: 6px;
+}
+
+.dropdown.open .dropdown-content {
+  display: block;
+}
+
+/* Arrow rotation */
+.dropdown-toggle .arrow {
+  margin-left: 5px;
+  transition: transform 0.3s;
+}
+
+.dropdown.open .arrow {
+  transform: rotate(180deg);
+}
+
+/* ---------- HAMBURGER ---------- */
+.hamburger {
+  display: none; /* hidden on desktop */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  z-index: 1001; /* above nav */
+}
+
+.hamburger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color:#fff; /* visible on dark header */
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger active state (X animation) */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ---------- MOBILE VIEW ---------- */
+@media (max-width: 768px) {
+
+  /* Show hamburger */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Mobile nav hidden initially */
+  .nav-links {
+    flex-direction: column;
+    background-color: #004080;
+    position: absolute;
+    top: 60px; /* below header */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  /* Show mobile menu on toggle */
+  .nav-links.show {
+    max-height: 500px; /* adjust according to number of items */
+  }
+
+  .nav-links li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Mobile dropdown */
+  .dropdown-content {
+    position: static;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #002850;
+    flex-direction: column;
+  }
+
+  .dropdown.open .dropdown-content {
+    max-height: 300px; /* adjust depending on submenu items */
+  }
+
+  /* Disable hover dropdown on mobile */
+  .dropdown:hover .dropdown-content {
+    display: none;
+  }
+
+  .dropdown .dropdown-toggle::after {
+    content: ' ▾';
+  }
+}
+/* ---------- HAMBURGER ---------- */
+.hamburger span {
+  display: block;
+  height: 4px;              /* thicker lines */
+  width: 100%;
+  background-color: white;   /* ✅ make lines visible */
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger active state (X animation) */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+}
+}
+/*Hamburger End*/
+/*Hamburger End*/
+/*Hamburger End*/
+/* ---------- COURSES PREVIEW ---------- */
+
+/*below codes are perfect dont change*/
+/*below codes are perfect dont change*/
+/*below codes are perfect dont change*/
+
+.courses-preview {
+  width: 90%;
+  max-width: 1100px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.courses-preview h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #004080;
+  font-weight: bold;
+}
+
+/* Grid layout for courses */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Individual course cards */
+.course-card {
+  background-color: #ffffff;
+  padding: 25px 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  text-decoration: none;
+  color: #004080;
+}
+
+.course-card h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.course-card p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Hover effect */
+.course-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+  background-color: #f0f8ff;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .courses-preview h2 {
+    font-size: 26px;
+  }
+
+  .course-card {
+    padding: 20px 15px;
+  }
+}
+/* ---------- CONTACT INFO ---------- */
+.contact-info {
+  width: 90%;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 25px 20px;
+  background-color: #f0f8ff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.contact-info h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #004080;
+  text-align: center;
+}
+
+.contact-info p {
+  font-size: 16px;
+  margin: 10px 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+.contact-info a {
+  color: #004080;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-info a:hover {
+  color: #ff9933;
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-info {
+    padding: 20px 15px;
+  }
+
+  .contact-info h3 {
+    font-size: 24px;
+  }
+
+  .contact-info p {
+    font-size: 15px;
+  }
+}
+/* ---------- GALLERY TEXT JUSTIFY ---------- */
+.gallery p,
+.gallery h3,
+.gallery h2 {
+  text-align: justify;
+}
+/* ---------- COURSES SECTION TEXT JUSTIFY ---------- */
+.courses-section p {
+  text-align: justify;
+  line-height: 1.6;  /* improves readability */
+  margin-bottom: 15px;
+}
+
+.courses-section h2,
+.courses-section h3 {
+  text-align: center;  /* keep headings centered */
+  margin-bottom: 10px;
+}
+
+.courses-section .course {
+  margin-bottom: 30px; /* space between courses */
+}
+
+.courses-section .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color:orangered;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.courses-section .btn:hover {
+  background-color: #e68a00;
+}
+/* ---------- ABOUT PREVIEW ---------- */
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap; /* responsive */
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto 50px auto;
+}
+
+.about-img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  text-align: justify;  /* ✅ JUSTIFY ONLY PARAGRAPHS */
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-text .btn-secondary {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0a9396;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.about-text .btn-secondary:hover {
+  background-color: #005f73;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text p {
+    text-align: justify; /* keep justified on mobile */
+  }
+
+  .about-img {
+    margin-bottom: 20px;
+  }
+}
+.hero {
+  padding-top: 80px; /* enough to clear fixed header */
+  background-color: #f9f9f9;
+  color: #333;
+}
+body{
+  
+  padding-top:0.5px; /* enough to clear fixed header */
+  background-color: #f9f9f9;
+  color: #333;
+
+}
+.course-overview p {
+  text-align: justify;
+}
+.course-overview {
+  max-width: 900px;      /* Optional: limits width for better readability */
+  margin: 40px auto;     /* Center the section with vertical spacing */
+  padding: 30px 25px;    /* Top/Bottom: 30px, Left/Right: 25px */
+  background-color: #fdfdfd;  /* Optional: subtle background */
+  border-radius: 12px;         /* Optional: rounded corners */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Optional: soft shadow */
+  font-family: "Poppins", sans-serif;     /* Clean readable font */
+  line-height: 1.7;          /* Spacing between lines */
+}
+
+.course-overview h2 {
+  font-size: 32px;
+  color: #004080;
+  margin-bottom: 15px;
+}
+
+.course-overview h3 {
+  font-size: 24px;
+  color: black;
+  margin-top: 25px;
+}
+
+.course-overview h4 {
+  font-size: 20px;
+  color: #333;
+  margin-top: 10px;
+}
+/* ---------- COURSES SECTION ---------- */
+.courses-section {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.courses-section h2 {
+  font-family: "Pacifico", cursive;
+  font-size: 36px;
+  color: blue;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.courses-section p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+/* ---------- INDIVIDUAL COURSE CARD ---------- */
+
+
+/* Hover Effect for Course Card */
+.course:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.course h3 {
+  font-family: "Pacifico", cursive;
+  font-size: 28px;
+  color: #004080;
+  margin-bottom: 15px;
+}
+
+.course p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* ---------- VIEW DETAILS BUTTON ---------- */
+/* Make buttons centered inside each course card */
+.course {
+  background-color: #fdfdfd;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  text-align: center;  /* Centers button and text if needed */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course .btn {
+  background: orangered;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 15px rgba(255,136,0,0.3);
+  display: inline-block; /* ensures it respects text-align center */
+}
+
+.course .btn:hover {
+  background: green;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(34, 193, 34, 0.5);
+
+}
+
+/* ---------- HORIZONTAL LINE ---------- */
+hr {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+  margin: 30px 0;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .courses-section {
+    padding: 15px;
+  }
+  .course {
+    padding: 20px 15px;
+  }
+}
+
+
+
+/*Till this codes except hamburger all are perfect dont make any changes*/
+/*Till this codes except hamburger all are perfect dont make any changes*/
+/*Till this codes except hamburger all are perfect dont make any changes*/
