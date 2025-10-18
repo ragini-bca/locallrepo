@@ -364,7 +364,8 @@ body {
   width:100%;     /* Smaller text size */
   margin: 0;
   text-align: center;      /* Keep centered */
-  color: #ffffff;          /* Ensure text stays visible */
+  color: #ffffff;  
+  position: relative;        /* Ensure text stays visible */
 }
 
 
